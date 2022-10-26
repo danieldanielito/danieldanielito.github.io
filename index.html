@@ -3,145 +3,114 @@
 <head>
     <style>
         body{
-            padding-left: 150px;
-            padding-right: 150px;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-
+            align-items: center;
+            background-color:blue;
         }
-      
-    .cabecera{
-        text-align: center;
-        width: 100%;
-        height: 400px;
+    .titulo {
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+        align-items: center; 
+        justify-content: center;
         background-color: red;
-        overflow: auto;
+        }
+        .titulo > div{
+        background-color: red;
+        width: 80%;
+        align-items: center;
+        text-align: center;
+        
+        }
+    .b2{
+        color: green;
+        font-size: 50px;
         
     }
-    .cuerpo{
-        width: 100%;
-        height: 500px;
-        background-color: gold;
+       .b{
+        padding-bottom: 40px;
        }
-       .pie{
-        width:100% ;
-        height: 120px;
-        justify-content: center;
-        
-        }
-        .f-izq{
-            float: left;
-        }
-        .f-der{
-            float: right;
-        }
-        .col-lado{
-           
-        width:25% ;
-        height: 500px;
-        background-color: aquamarine;
+    a{
+        color: beige;
+            text-decoration: none;
+    }
+       .cuerpo {
         display: flex;
-        flex-direction: column;
-        }
-        .col-centro{
-        width:75% ;
-        height: 500px;
-        background: url(diego.jpg);
-        background-size: 100%;
-        }
-         .col-lado1{
-         height: 140px;
-         width: 100%;
-         margin: 10px 0px;
+        width: 75%;
         justify-content: center;
-        background-color:chocolate;
-        text-align: center;
+        background-color: blue;
+       
         }
-        .col-lado2{
-         
-         width: 100%;
-        
-        
+        .cuerpo > div{
+  background-color: DodgerBlue;
+  color: white;
+ 
+  text-align: center;
+
         }
-        a{
-        display: block;
-        
-        color: white;
-        
-        text-decoration: none;
-        
-        
-       }
-         .col-centro1{
-         width: 50%;
-         height: 100px;
-         margin: 10px 0px;
-        background-color:darkgrey;
+        .izq{
+            display: flex;
+
+            flex-direction: column;
+            width: 25%;
         }
-        ul{
-          
+        .der{
+            width: 75%;
+            
+            background: url(diego.jpg);
+            background-size: 100% 100%;
+            
         }
-        li{
-            padding: 23px;
-            text-align: center;
-            font-size: 40px;
-            color: beige;
+        .der1{
+            height: 20%;
+            font-size: 50px;
+           
         }
        
-
-       </style>
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
-    
-    <div class=" cabecera">
-        <div class="f-izq col-lado2">
-        <h1>"deportes en el recuerdo"</h1>
-        <div >
-            <img src="Pablo.jpg" width="70%"   height="300px">
+    <div class="titulo">
+        <h2 class="b2">"deportes en el recuerdo"</h2>
+        <div class="b">
+        <img src="Pablo.jpg" width="100%"   height="400px">
         </div>
-        </div>
-</div>
     </div>
-    
         <div class="cuerpo">
-        <div class="f-izq col-lado" >
+        <div class="izq" >
+            <img src="futbol.jpg">
+            <img src="atletismo.jpg">
+            <img src="natacion.jpg" >
+            <img src="Monzon.jpg" >
+            <img src="tenis.jpg">
+        
+            
+            </div>
+        <div class="der">
+           
+                
+                <div class="der1"><a href="miPro3.html" >futbol</a></div>
+                <div class="der1"><a href="miPro3.html" >atletismo</a></div>
+                <div class="der1"><a href="miPro3.html" >natacion</a></div>
+                <div class="der1"><a href="miPro3.html" >boxeo</a></div>
+                <div class="der1"><a href="miPro3.html" >tenis</a></div>
            
             
-            <img src="futbol.jpg" width="100%" height="20%">
-            <img src="atletismo.jpg" width="100%" height="20%">
-            <img src="natacion.jpg" width="100%" height="20%">
-            <img src="Monzon.jpg" width="100%" height="20%">
-            <img src="tenis.jpg" width="100%" height="20%">
-        
-        </div>
-        <div class="f-izq col-centro">
-            
-          
-      
-            <ul>
-                
-                <li><a href="miPro3.html" >futbol</a></li>
-                <li><a href="miPro3.html" >atletismo</a></li>
-                <li><a href="miPro3.html" >natacion</a></li>
-                <li><a href="miPro3.html" >boxeo</a></li>
-                <li><a href="miPro3.html" >tenis</a></li>
-                
-            </ul>
-            
-        </div>
-        
-    <div class="  pie">
-        <div class="f-izq col-lado1" >
 
-        <p>tel 555-5555</p>
-        <p>correo 66666</p>
-        
-   
+        </div>
         </div>
     </div>
+    
+       
+       
+       
 
     
 </body>
