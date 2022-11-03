@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            text-align: center;
+        }
+        img{
+           width: 600px;
+           height: 300px; 
+        }
+        
+       
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img id="imagen" src="Pablo.jpg" ><br>
+    
+  <button onclick="avanzar()"><<</button>
+  <button onclick="retroceder()">>></button>
+  
+ 
+<script>
+    let indice=0;
+     var fotos = [ //creo vector que contiene las siguiens imágenes
+      "futbol.jpg","pablo.jpg","atletismo.jpg"
+       ];
+    function avanzar(){
+      if (indice >= fotos.length-1 ) {
+        indice = 0;
+        
+      } else {
+        indice++;
+      }
+      let img = fotos[indice];
+      document.getElementById("imagen").src=img;
+     
+        
+    }
+    function retroceder(){
+      if (indice <= 0 ) {
+        indice = fotos.length-1;
+        
+      } else {
+        indice--;
+      }
+      let img = document.getElementById("imagen");
+     img.src=fotos[indice];
+     
+        
+    }
+   
+    
+      </script>
+    
+</body>
+</html>
