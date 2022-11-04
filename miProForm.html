@@ -80,8 +80,9 @@
     <input class="control" type="text" name="nombres" id="nombres" placeholder="ingrese su nonbre">
     <input class="control" type="text" name="apellido" id="apellido" placeholder="ingrese su apellido">
     <input class="control" type="text" name="mail" id="mail" placeholder="ingrese su correo">
-    <input class="control1" type="text" name="mensaje" id="mensaje" placeholder="dejenos su mensaje">
-    <input class="boton" type="submit" value="guardar">
+    <textarea style="text-align: center;font-family: Arial, Helvetica, sans-serif;" 
+    name="" id="mensaje" cols="51" rows="4" placeholder="dejenos su mensaje"></textarea>
+    <button  class="boton" type="button" onclick="guardar()">guardar</button>
    
   </form> 
   <div class="pie">
@@ -91,6 +92,47 @@
     
    
 </div>
-    
+<div id="nom"></div>
+<div id="ape"></div>
+<div id="mai"></div>
+<div id="val"></div>
+    <script>
+        function guardar(){
+            var nombre = document.getElementById("nombres").value;
+            var apellido = document.getElementById("apellido").value;
+            var mail = document.getElementById("mail").value;
+            var mensaje=document.getElementById("mensaje").value;
+            var nom=document.getElementById("nom");
+            var nom=document.getElementById("ape");
+            var nom=document.getElementById("mai");
+            var regex= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+                    if(nombre==""){
+                nom.innerHTML="debe ingresar el nombre";
+                document.getElementById("nombres").focus();
+                //nom.innerHTML="";
+            }
+                else if(apellido==""){
+                    ape.innerHTML="debe ingresar el apellido";
+                document.getElementById("apellido").focus();
+                //ape.innerHTML="";
+           
+            }else if(mail==""){
+                mai.innerHTML="debe ingresar el mail";
+                document.getElementById("mail").focus();
+                //mai.innerHTML="";
+            } else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(nombre.value)){
+                val.innerHTML="debe ingresar un mail valido";
+                document.getElementById("mail").focus();
+                //mai.innerHTML="";
+            } 
+
+            else{
+                document.getElementById("nombres").value="";
+                document.getElementById("apellido").value="";
+                document.getElementById("mail").value="";
+            }
+
+        }
+    </script>
 </body>
 </html>
