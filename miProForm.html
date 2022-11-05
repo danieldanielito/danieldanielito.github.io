@@ -75,7 +75,7 @@
 </head>
 <body>
    
-<form class="cuerpo" >
+<form class="cuerpo" id="fr">
     <h2 class="titulo">formulario registro</h2>
     <input class="control" type="text" name="nombres" id="nombres" placeholder="ingrese su nonbre">
     <input class="control" type="text" name="apellido" id="apellido" placeholder="ingrese su apellido">
@@ -92,7 +92,7 @@
    
 </div>
 <p class="fac"   id="fac">este</p>
-   
+<p class="fac"   id="fac1"></p>
 
     <script>
         var nombre = document.getElementById("nombres");
@@ -100,9 +100,12 @@
             var mail = document.getElementById("mail");
             var mensaje=document.getElementById("mensaje");
             let parrafo=document.getElementById("fac");
+            let p=document.getElementById("fac1");
+            let fr=document.getElementById("fr");
            
-            let entrar=false;
+            
             function guardar(){
+                let entrar=false;
                 let aler="";
                 if(nombre.value.length==0){
                     aler+="el nombre esta vacio<br>";
@@ -124,7 +127,15 @@
 
                 if(entrar==true){
                     parrafo.innerHTML=aler;
-                }
+                } else{
+                aler="mensaje enviado";
+                parrafo.innerHTML=aler;
+                fr.reset();
+
+              }
+             
+              
+         
                 
                 
         }
