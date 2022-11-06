@@ -92,7 +92,7 @@
    
 </div>
 <p class="fac"   id="fac">este</p>
-<p class="fac"   id="fac1"></p>
+
 
     <script>
         var nombre = document.getElementById("nombres");
@@ -107,17 +107,23 @@
             function guardar(){
                 let entrar=false;
                 let aler="";
+                let alert1="";
                 if(nombre.value.length==0){
+                    alert1+=" el nombres esta vacio \n ";
                     aler+="el nombre esta vacio<br>";
+                    //nombre.focus();
                     entrar = true;
                 }
                 if(apellido.value.length==0){
+                    alert1+=" el apellido esta vacio \n ";
                     aler+="el apellido esta vacio<br>";
                     entrar = true;
                 }
                
                 var regex =  /^\w+@\w+(\.\w{2,4})+$/;
                 if(!regex.test(mail.value)){
+                    alert1+="el mail esta incorrecto \n";
+
                     aler+="el mail es incorrecto<br>";
                     entrar = true;
                   // ale="falso";
@@ -126,10 +132,15 @@
                 } 
 
                 if(entrar==true){
-                    parrafo.innerHTML=aler;
+                  
+                  parrafo.innerHTML=aler;
+                  alert(alert1);
                 } else{
+                   
                 aler="mensaje enviado";
                 parrafo.innerHTML=aler;
+                alert("enviado con exito");
+                p.innerHTML=alert1;
                 fr.reset();
 
               }
