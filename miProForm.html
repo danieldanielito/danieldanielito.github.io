@@ -92,7 +92,8 @@
    
 </div>
 <p class="fac"   id="fac">este</p>
-
+<ul id="lista">
+</ul>
 
     <script>
         var nombre = document.getElementById("nombres");
@@ -101,20 +102,21 @@
             var mensaje=document.getElementById("mensaje");
             let parrafo=document.getElementById("fac");
             let p=document.getElementById("fac1");
-            let fr=document.getElementById("fr");
+            
+            var lta=document.getElementById("lista");
            
             
             function guardar(){
                 let entrar=false;
                 let aler="";
                 let alert1="";
-                if(nombre.value.length==0){
+                if(nombre.value.trim().length==0){
                     alert1+=" el nombres esta vacio \n ";
                     aler+="el nombre esta vacio<br>";
                     //nombre.focus();
                     entrar = true;
                 }
-                if(apellido.value.length==0){
+                if(apellido.value.trim().length==0){
                     alert1+=" el apellido esta vacio \n ";
                     aler+="el apellido esta vacio<br>";
                     entrar = true;
@@ -136,13 +138,17 @@
                   parrafo.innerHTML=aler;
                   alert(alert1);
                 } else{
-                   
+                let item=document.createElement("li");
+                lta.appendChild(item);
+                item.innerHTML = nombre.value +" "+apellido.value+"<br>correo "+mail.value+"<br>dice "+mensaje.value;
+               // mensaje.style.background ="white";             
                 aler="mensaje enviado";
                 parrafo.innerHTML=aler;
-                alert("enviado con exito");
-                p.innerHTML=alert1;
+                //alert("enviado con exito");
                 fr.reset();
-
+                p.innerHTML=alert1;
+              
+                
               }
              
               
