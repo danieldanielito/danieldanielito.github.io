@@ -43,7 +43,7 @@
 <script>
     let indice=0;
      var fotos = [ //creo vector que contiene las siguiens imágenes
-      "futbol.jpg","pablo.jpg","atletismo.jpg"
+      "futbol.jpg","tenis.jpg","atletismo.jpg"
        ];
     function avanzar(){
       if (indice >= fotos.length-1 ) {
@@ -54,8 +54,7 @@
       }
       let img = fotos[indice];
       document.getElementById("imagen").src=img;
-     
-        
+   
     }
     function retroceder(){
       if (indice <= 0 ) {
@@ -66,12 +65,8 @@
       }
       let img = document.getElementById("imagen");
      img.src=fotos[indice];
-     
-        
-    }
-   
-    
-      </script>
+  }
+     </script>
       
     
 </body>
