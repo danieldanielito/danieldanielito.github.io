@@ -67,6 +67,14 @@
         text-decoration: none;
         margin: 15px;
        }
+       .lista{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       .fac{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+       }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,8 +88,8 @@
     <input class="control" type="text" name="nombres" id="nombres" placeholder="ingrese su nonbre">
     <input class="control" type="text" name="apellido" id="apellido" placeholder="ingrese su apellido">
     <input class="control" type="text" name="mail" id="mail" placeholder="ingrese su correo">
-    <textarea style="text-align: center;font-family: Arial, Helvetica, sans-serif;" 
-    name="" id="mensaje" cols="51" rows="4" placeholder="dejenos su mensaje"></textarea>
+    <textarea class="control " style="text-align: center;font-family: Arial, Helvetica, sans-serif;" 
+    name="" id="mensaje"  rows="4px" placeholder="dejenos su mensaje"></textarea>
     <button  class="boton" type="button" onclick="guardar()">guardar</button>
    
   </form> 
@@ -92,7 +100,7 @@
    
 </div>
 <p class="fac"   id="fac">este</p>
-<ul id="lista">
+<ul class="lista" id="lista">
 </ul>
 
     <script>
