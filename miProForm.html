@@ -55,6 +55,15 @@
         margin: 16px;
        
         }
+        .nuevo {
+        display: flex;
+        flex-wrap: wrap;
+        height: 150px;
+        justify-content: center;
+        background-color: white;
+        
+       
+        }
         a{
         display: block;
         width: 150px;
@@ -68,10 +77,12 @@
         margin: 15px;
        }
        .lista{
+        
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
        }
        .fac{
+        
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         color: blue;
@@ -100,9 +111,11 @@
     <a href="miPro3.html" >pag  de boxeo</a>
    
 </div>
+
 <p class="fac"   id="fac"></p>
 <ul class="lista" id="lista">
 </ul>
+
 
     <script>
         var nombre = document.getElementById("nombres");
@@ -119,15 +132,15 @@
                 let entrar=false;
                 let aler="";
                 let alert1="";
-                if(nombre.value.trim().length==0){
-                    alert1+=" el nombres esta vacio \n ";
-                    aler+="el nombre esta vacio<br>";
+                if(nombre.value.trim().length==0||nombre.value.trim().length>20){
+                    alert1+=" ingrese correctamente los datos del nombre \n ";
+                    aler+="ingrese correctamente los datos del nombre<br>";
                     //nombre.focus();
                     entrar = true;
                 }
-                if(apellido.value.trim().length==0){
-                    alert1+=" el apellido esta vacio \n ";
-                    aler+="el apellido esta vacio<br>";
+                if(apellido.value.trim().length==0||apellido.value.trim().length>20){
+                    alert1+=" ingrese correctamente los datos del apellido \n ";
+                    aler+="ingrese correctamente los datos del apellido <br>";
                     entrar = true;
                 }
                
