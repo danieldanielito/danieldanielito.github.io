@@ -132,13 +132,14 @@
                 let entrar=false;
                 let aler="";
                 let alert1="";
-                if(nombre.value.trim().length==0||nombre.value.trim().length>20){
+                var regex1 = /^[A-Za-z]+$/;
+                 if(nombre.value.trim().length==0||nombre.value.trim().length>20||!regex1.test(nombre.value)){
                     alert1+=" ingrese correctamente los datos del nombre \n ";
                     aler+="ingrese correctamente los datos del nombre<br>";
                     //nombre.focus();
                     entrar = true;
                 }
-                if(apellido.value.trim().length==0||apellido.value.trim().length>20){
+                if(apellido.value.trim().length==0||apellido.value.trim().length>20||!regex1.test(apellido.value)){
                     alert1+=" ingrese correctamente los datos del apellido \n ";
                     aler+="ingrese correctamente los datos del apellido <br>";
                     entrar = true;
